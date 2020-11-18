@@ -14,11 +14,26 @@ import java.io.*;
 public class InPutStreamDemo {
 
     @Test
+    public void test02() throws IOException {
+        FileInputStream fis = new FileInputStream("C:\\Users\\12159\\Pictures\\极简壁纸\\3k7j5d.jpg");
+        FileOutputStream fos = new FileOutputStream("Jin\\src\\com\\java\\io\\txt\\3k7j5d.jpg");
+
+        byte[] bys = new byte[1024];
+        int len;
+        while ((len = fis.read(bys)) != -1) {
+            System.out.println(new String(bys, 0, len));
+            fos.write(bys,0,len);
+        }
+        fis.close();
+        fos.close();
+    }
+
+    @Test
     public void test01() throws IOException {
         FileInputStream fis = new FileInputStream("Jin/src/com/java/io/txt/OutputStreamDemo.txt");
         FileOutputStream fos = new FileOutputStream("Jin/src/com/java/io/txt/InputStreamDemo.txt");
         int by;
-        while ((by = fis.read()) != -1){
+        while ((by = fis.read()) != -1) {
             fos.write(by);
         }
         fos.close();
@@ -89,7 +104,7 @@ public class InPutStreamDemo {
         byte[] bytes = new byte[1024];
         int len = 0;
         while ((len = fileInputStream.read(bytes)) != -1) {
-            
+
             System.out.println(new String(bytes, 0, len));
         }
         fileInputStream.close();
