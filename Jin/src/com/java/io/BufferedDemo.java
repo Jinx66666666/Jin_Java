@@ -40,8 +40,9 @@ public class BufferedDemo {
         reader.close();
     }
 
-    private static void demo05() throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader("Jin\\src\\com\\jin01\\io\\aaa.txt"));
+    @Test
+    public void demo05() throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader("Jin\\src\\com\\java\\io\\txt\\Buuuered.txt"));
        /* String line = reader.readLine();
         System.out.println(line);
         line = reader.readLine();
@@ -66,8 +67,9 @@ public class BufferedDemo {
  *
  *
  */
-    private static void demo04() throws IOException {
-        BufferedWriter outputStream = new BufferedWriter(new FileWriter("D:\\Jin-project\\Jin\\src\\com\\jin01\\io\\aaa.txt"));
+    @Test
+    public void demo04() throws IOException {
+        BufferedWriter outputStream = new BufferedWriter(new FileWriter("Jin\\src\\com\\java\\io\\txt\\Buuuered.txt"));
         for (int i = 0; i < 10; i++) {
             outputStream.write("为你千千万万遍" + "\r\n");
             outputStream.newLine();
