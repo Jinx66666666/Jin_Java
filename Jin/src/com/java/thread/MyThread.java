@@ -6,7 +6,7 @@ package com.java.thread;
  * @date: 2020/01/07  14:44:29
  * @Version: 1.0
  **/
-public class MyThread extends Thread{
+public class MyThread extends Thread {
     @Override
     public void run() {
         String name = getName();
@@ -14,5 +14,6 @@ public class MyThread extends Thread{
 
         Thread thread = Thread.currentThread();
         System.out.println(thread);
+
     }
 }
